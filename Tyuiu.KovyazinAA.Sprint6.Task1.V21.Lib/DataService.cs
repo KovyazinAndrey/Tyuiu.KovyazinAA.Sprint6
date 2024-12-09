@@ -15,7 +15,7 @@ namespace Tyuiu.KovyazinAA.Sprint6.Task1.V21.Lib
                 if (2 - 2 * i != 0)
                 {
                     y = (Math.Cos(i)) + ((Math.Sin(i)) / (2 - 2 * i)) - (4 * i);
-                    y = Math.Round(y, 3);
+                    y = Math.Round(y, 2);
                     res[count] = y;
                 }
                 else
