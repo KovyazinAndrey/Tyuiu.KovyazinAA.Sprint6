@@ -140,7 +140,7 @@
             buttonResult.Name = "buttonResult";
             buttonResult.Size = new Size(175, 90);
             buttonResult.TabIndex = 5;
-            buttonResult.Text = "button3";
+            buttonResult.Text = "Выполнить";
             buttonResult.UseVisualStyleBackColor = true;
             buttonResult.Click += textBox2_TextChanged;
             // 
