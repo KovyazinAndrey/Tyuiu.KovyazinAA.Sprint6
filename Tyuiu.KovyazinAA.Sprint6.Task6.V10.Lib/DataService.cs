@@ -24,7 +24,7 @@ namespace Tyuiu.KovyazinAA.Sprint6.Task6.V10.Lib
             {
                 if (FinalResult[i].Contains("w"))
                 {
-                    if (i == 0)
+                    if (resStr == "")
                     {
                         resStr = FinalResult[i];
                     }
