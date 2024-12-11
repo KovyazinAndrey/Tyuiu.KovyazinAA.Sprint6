@@ -34,8 +34,8 @@
             toolTipHelp = new ToolTip(components);
             buttonHelp = new Button();
             buttonOpenFile = new Button();
-            panelTaskAndButtons = new Panel();
             buttonDone = new Button();
+            panelTaskAndButtons = new Panel();
             groupBoxTask = new GroupBox();
             textBoxTask = new TextBox();
             panel1 = new Panel();
@@ -65,26 +65,42 @@
             // buttonHelp
             // 
             buttonHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonHelp.BackgroundImage = (Image)resources.GetObject("buttonHelp.BackgroundImage");
+            buttonHelp.BackgroundImageLayout = ImageLayout.Center;
+            buttonHelp.Cursor = Cursors.Hand;
             buttonHelp.Location = new Point(673, 12);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Size = new Size(117, 84);
             buttonHelp.TabIndex = 3;
-            buttonHelp.Text = "О программе";
             toolTipHelp.SetToolTip(buttonHelp, "Сведения о программе");
             buttonHelp.UseVisualStyleBackColor = true;
             buttonHelp.Click += buttonHelp_Click;
             // 
             // buttonOpenFile
             // 
+            buttonOpenFile.BackgroundImage = (Image)resources.GetObject("buttonOpenFile.BackgroundImage");
+            buttonOpenFile.BackgroundImageLayout = ImageLayout.Center;
             buttonOpenFile.Cursor = Cursors.Hand;
             buttonOpenFile.Location = new Point(12, 12);
             buttonOpenFile.Name = "buttonOpenFile";
             buttonOpenFile.Size = new Size(142, 84);
             buttonOpenFile.TabIndex = 1;
-            buttonOpenFile.Text = "Выбрать файл";
             toolTipHelp.SetToolTip(buttonOpenFile, "Выбрать файл.\r\nВыберите нужный фаул для обработки.\r\n");
             buttonOpenFile.UseVisualStyleBackColor = true;
             buttonOpenFile.Click += buttonOpenFile_Click;
+            // 
+            // buttonDone
+            // 
+            buttonDone.Cursor = Cursors.Hand;
+            buttonDone.Enabled = false;
+            buttonDone.Image = (Image)resources.GetObject("buttonDone.Image");
+            buttonDone.Location = new Point(160, 12);
+            buttonDone.Name = "buttonDone";
+            buttonDone.Size = new Size(124, 84);
+            buttonDone.TabIndex = 2;
+            toolTipHelp.SetToolTip(buttonDone, "Производит поиск в файле слов содержащих \"w\" и выводит строки с ними.\r\n");
+            buttonDone.UseVisualStyleBackColor = true;
+            buttonDone.Click += buttonDone_Click;
             // 
             // panelTaskAndButtons
             // 
@@ -97,19 +113,6 @@
             panelTaskAndButtons.Name = "panelTaskAndButtons";
             panelTaskAndButtons.Size = new Size(802, 202);
             panelTaskAndButtons.TabIndex = 0;
-            // 
-            // buttonDone
-            // 
-            buttonDone.Cursor = Cursors.Hand;
-            buttonDone.Enabled = false;
-            buttonDone.Location = new Point(160, 12);
-            buttonDone.Name = "buttonDone";
-            buttonDone.Size = new Size(124, 84);
-            buttonDone.TabIndex = 2;
-            buttonDone.Text = "Выполнить";
-            toolTipHelp.SetToolTip(buttonDone, "Производит поиск в файле слов содержащих \"w\" и выводит строки с ними.\r\n");
-            buttonDone.UseVisualStyleBackColor = true;
-            buttonDone.Click += buttonDone_Click;
             // 
             // groupBoxTask
             // 

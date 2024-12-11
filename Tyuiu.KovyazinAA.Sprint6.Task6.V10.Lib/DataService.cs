@@ -12,9 +12,25 @@ namespace Tyuiu.KovyazinAA.Sprint6.Task6.V10.Lib
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (line.Contains("w") || line.Contains("W")) 
+                    if (line.Contains("w")) 
                     {
                         resStr = resStr + " " + line;
+                    }
+                }
+            }
+            string[] FinalResult = resStr.Split(' ');
+            resStr = "";
+            for (int i = 0; i < FinalResult.Length; i++)
+            {
+                if (FinalResult[i].Contains("w"))
+                {
+                    if (i == 0)
+                    {
+                        resStr = FinalResult[i];
+                    }
+                    else
+                    {
+                        resStr = resStr + " " + FinalResult[i];
                     }
                 }
             }
